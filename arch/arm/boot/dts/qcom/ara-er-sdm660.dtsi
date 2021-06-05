@@ -2761,3 +2761,4 @@
 
 #include "ara-er-sdm660-mdss.dtsi"
 #include "ara-er-sdm660-mdss-pll.dtsi"
+#include "sdm660-thermal.dtsi"

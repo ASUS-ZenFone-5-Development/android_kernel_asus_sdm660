@@ -4034,7 +4034,7 @@ static int file_op(const char *filename, loff_t offset, char *buf, int length, i
 		return -1;
 	}
 	if(filep < 0) {
-		pr_err("open %s err! error code:%d\n", filename, filep);
+		pr_debug("open %s err! error code:%d\n", filename, filep);
 		return -1;
 	}
    else
@@ -4070,7 +4070,7 @@ static int backup_bat_percentage(void)
 	rc = file_op(BAT_PERCENT_FILE_NAME, CYCLE_COUNT_DATA_OFFSET,
 		(char *)&buf, sizeof(char), FILE_OP_WRITE);
 	if(rc<0)
-		pr_err("%s:Write file:%s err!\n", __FUNCTION__, BAT_PERCENT_FILE_NAME);
+		pr_debug("%s:Write file:%s err!\n", __FUNCTION__, BAT_PERCENT_FILE_NAME);
 
 	return rc;
 }
@@ -4395,7 +4395,7 @@ static void update_battery_safe(struct fg_chip *chip)
 	if(g_cyclecount_initialized != true){
 		rc = init_batt_cycle_count_data();
 		if(rc < 0){
-			pr_err("cyclecount is not initialized");
+			pr_debug("cyclecount is not initialized");
 			return;
 		}
 	}
@@ -4485,7 +4485,7 @@ static int resotre_bat_health(void)
 	rc = file_op(BAT_HEALTH_DATA_FILE_NAME, BAT_HEALTH_DATA_OFFSET,
 		(char*)&g_bat_health_data_backup, sizeof(struct BAT_HEALTH_DATA_BACKUP)*BAT_HEALTH_NUMBER_MAX, FILE_OP_READ);
 	if(rc < 0) {
-		pr_err("Read bat health file failed!\n");
+		pr_debug("Read bat health file failed!\n");
 		return -1;
 	}
 

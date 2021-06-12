@@ -16,6 +16,10 @@
 *.s
 *.ko
 *.so
+gcc-*
+clang
+out
+*.txt
 *.so.dbg
 *.mod.c
 *.lst

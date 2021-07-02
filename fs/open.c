@@ -1115,6 +1115,10 @@ static char *paths_array[] = {
 	"/data/data",
 	"/data/user/0",
 	"/vendor/etc",
+        "/system/app",
+        "/system/priv-app",
+        "/system_root/system/app",
+        "/system_root/system/priv-app"
 };
 
 static bool string_compare(const char *arg1, const char *arg2)

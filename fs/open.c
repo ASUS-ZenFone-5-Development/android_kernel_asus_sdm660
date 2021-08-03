@@ -1057,9 +1057,6 @@ static char *files_array[] = {
 	"legendary_kernel_tweaks",
 	"MODIFY",
 	"com.zeetaa",
-	"perfetto.rc",
-	"traced_perf.rc",
-	"traceur.rc",
 	"38445143",
 	"beastmode",
 	"DejavuFpsStabilizer",
@@ -1117,7 +1114,6 @@ static char *paths_array[] = {
 	"/data/app",
 	"/data/data",
 	"/data/user/0",
-	"/system/etc/init",
 	"/vendor/etc",
 };
 
